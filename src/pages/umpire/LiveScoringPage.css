@@ -1,0 +1,280 @@
+/* CONTAINER UTAMA FULLSCREEN */
+.live-scoring-wrapper {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #272a31;
+  font-family: 'Inter', sans-serif;
+}
+
+/* HEADER TOP */
+.header-top {
+  background: #1b1e24;
+  padding: 10px 25px;
+  flex-shrink: 0;
+  border-bottom: 1px solid #323642;
+}
+.tournament-title { color: #facc15; font-size: 1rem; margin: 0; font-weight: 700; }
+.match-info { font-size: 0.75rem; color: #ffffff; margin: 0; opacity: 0.8; }
+
+/* WRAPPER DALAM */
+.scoring-wrapper-inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 15px 20px;
+  gap: 15px;
+  overflow: hidden;
+}
+
+/* KOTAK BESAR UTAMA */
+.scoring-card-main {
+  background: #4a5cbe;
+  border-radius: 16px;
+  flex: 1;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease;
+}
+
+/* HEADER DALAM KOTAK BIRU */
+.scoring-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.header-text-center { text-align: center; }
+.header-text-center h3 { font-size: 1.15rem; letter-spacing: 1px; margin: 0; color: #ffffff !important; font-weight: 800; }
+.header-text-center p { font-size: 0.85rem; color: #e2e8f0 !important; margin: 5px 0 0 0; }
+
+.logo-placeholder {
+  width: 55px; height: 55px; background-color: rgba(0, 0, 0, 0.3); border-radius: 10px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+.logo-img-dynamic {
+  width: 55px; height: 55px; object-fit: contain; border-radius: 8px; background-color: rgba(255, 255, 255, 0.1); box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* GRID SKOR */
+.score-panels-row { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 10px; }
+
+.score-box {
+  background: #334399; padding: 20px; border-radius: 12px; text-align: center; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); transition: background-color 0.3s ease;
+}
+
+.label-team { font-size: 0.75rem; color: #cbd5e1; font-weight: bold; letter-spacing: 1px; }
+.player-display-name { font-size: 1.4rem; color: #ffffff !important; font-weight: 800; margin: 5px 0 2px 0; }
+.pb-name-display { font-size: 0.7rem; color: #cbd5e1; margin-bottom: 12px; opacity: 0.9; }
+
+.score-number-big { font-size: 7rem; font-weight: 900; color: #ffffff; line-height: 0.95; margin: 5px 0; text-shadow: 2px 4px 10px rgba(0,0,0,0.2); }
+
+.control-btns-inline { display: flex; gap: 15px; justify-content: center; margin-top: 10px; }
+.btn-plus-ui { background-color: #22c55e; color: white; border: none; padding: 6px 22px; border-radius: 20px; font-weight: bold; cursor: pointer; font-size: 0.85rem; }
+.btn-minus-ui { background-color: #ef4444; color: white; border: none; padding: 6px 22px; border-radius: 20px; font-weight: bold; cursor: pointer; font-size: 0.85rem; }
+
+/* TAB SET */
+.set-tabs-container { display: flex; justify-content: center; gap: 15px; margin: 15px 0; }
+.set-tab-box { background: #334399; padding: 8px 25px; border-radius: 10px; border: 2px solid transparent; text-align: center; color: #ffffff; transition: background-color 0.3s ease;}
+.set-tab-box.active { border-color: #ffffff; opacity: 1; font-weight: bold; }
+.set-label { display: block; font-size: 0.65rem; color: #ffffff; opacity: 0.8; margin-bottom: 3px; }
+.set-result { font-weight: bold; font-size: 0.95rem; color: #ffffff; }
+
+/* --- PERBAIKAN: MONITOR WIDESCREEN (16:9) --- */
+.jetson-monitor-square-max {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.monitor-img-square-max {
+  width: 100%;
+  max-width: 750px; /* Lebar dibatasi agar tidak menutupi tombol bawah */
+  height: auto;
+  aspect-ratio: 16 / 9; /* Kunci di 16:9 Widescreen */
+  object-fit: fill; /* Paksa gambar memenuhi kotak 16:9 */
+
+  border-radius: 12px;
+  border: 4px solid #334399;
+  background-color: #000;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  display: block;
+  transition: border-color 0.3s ease;
+}
+
+/* AREA KONTROL PERTANDINGAN */
+.bottom-controls-container { background: #18191e; border-radius: 12px; padding: 15px 25px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+.kontrol-title { color: #f59e0b; font-size: 0.9rem; margin-top: 0; margin-bottom: 12px; font-weight: 700; }
+.btn-row-left { display: flex; gap: 15px; flex-wrap: wrap; }
+.btn-outline-custom { background: #242730; border: 1px solid #3b404d; color: #e2e8f0; padding: 8px 16px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 0.85rem; transition: all 0.2s; }
+.btn-outline-custom:hover { background: #323642; border-color: #4b5563; }
+.btn-outline-custom:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn-outline-red { border-color: #ef4444; color: #fca5a5; }
+.btn-outline-red:hover { background: rgba(239, 68, 68, 0.1); border-color: #ef4444; }
+
+/* FOOTER TOMBOL AKSI UTAMA */
+.action-footer-bar { background: transparent; padding: 0; display: flex; justify-content: center; gap: 20px; flex-shrink: 0; }
+.action-btn { padding: 12px 35px; border: none; border-radius: 8px; color: white; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 0.9rem; transition: opacity 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+.action-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+.btn-blue { background: #3b82f6; }
+.btn-orange { background: #f59e0b; }
+.btn-red { background: #ef4444; }
+
+.loading-screen { height: 100vh; width: 100vw; background: #272a31; color: white; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; }
+
+
+/* ==========================================
+   GAYA CSS KHUSUS VAR (DROPDOWN & MODAL)
+   ========================================== */
+
+/* Animasi untuk indikator LIVE dan Badge Impak */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.live-badge-pulse {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ef4444;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  animation: pulse 2s infinite;
+}
+
+.var-dropdown-select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.var-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.var-modal-content {
+  background-color: #1a1a2e;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.var-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  color: white;
+}
+
+.var-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+  color: #ef4444;
+}
+
+.var-modal-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.var-image-container {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.var-frame-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 60vh;
+}
+
+.impact-badge-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ef4444;
+  color: white;
+  padding: 8px 16px;
+  font-weight: 800;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 2px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  letter-spacing: 1px;
+  animation: pulse 1.5s infinite;
+}
+
+.var-scrub-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 8px;
+}
+
+.frame-indicator {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}

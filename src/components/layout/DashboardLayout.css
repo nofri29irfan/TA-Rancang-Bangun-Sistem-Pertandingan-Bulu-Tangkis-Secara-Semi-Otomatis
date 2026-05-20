@@ -1,0 +1,81 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-layout__main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  transition: margin-left var(--transition-base);
+  min-width: 0;
+}
+
+.dashboard-layout--collapsed .dashboard-layout__main {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+/* ── PERBAIKAN DI SINI ── */
+.dashboard-layout__content {
+  flex: 1;
+  /* DIUBAH: Jarak atas dikurangi dari 32px menjadi 16px agar judul naik */
+  padding: 16px 40px 32px 40px; /* Urutan: Atas Kanan Bawah Kiri */
+  background: #f8fafc;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-layout__page-header {
+  margin-bottom: 32px;
+}
+
+/* Judul Halaman (Di Atas) */
+.dashboard-layout__page-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px; /* Jarak ke breadcrumbs di bawahnya */
+  letter-spacing: -0.5px;
+}
+
+/* Breadcrumbs (Di Bawah Judul) */
+.dashboard-layout__breadcrumbs {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-separator {
+  margin: 0 8px;
+  color: #94a3b8;
+}
+
+.breadcrumb-link {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+  color: #2563eb;
+}
+
+.breadcrumb-link.active {
+  color: #64748b;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout__main { margin-left: 0 !important; }
+  /* Sesuaikan juga padding di mobile agar konsisten */
+  .dashboard-layout__content { padding: 12px 20px 24px 20px; }
+  .dashboard-layout__page-title { font-size: 20px; }
+}

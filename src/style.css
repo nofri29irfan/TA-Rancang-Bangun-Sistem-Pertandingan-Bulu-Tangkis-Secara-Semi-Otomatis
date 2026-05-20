@@ -1,0 +1,43 @@
+/* 1. RESET DASAR */
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. PAKSA FULLSCREEN DARI AKAR */
+html,
+body,
+#root,
+#app {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background-color: #ffffff !important;
+  overflow-x: hidden !important;
+  display: block !important; /* Menghilangkan efek flex dari template lama */
+}
+
+/* 3. SETTING TYPOGRAPHY STANDAR */
+:root {
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 4. HAPUS SEMUA GARIS PEMBATAS BAWAAN TEMPLATE */
+div, section, header, footer {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 5. UTILITY UNTUK CARD (Agar shadow di FeatureCard tetap muncul jika dibutuhkan) */
+.feature-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid #f0f0f0 !important;
+}

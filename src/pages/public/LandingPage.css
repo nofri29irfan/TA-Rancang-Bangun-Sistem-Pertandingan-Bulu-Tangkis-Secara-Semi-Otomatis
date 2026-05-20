@@ -1,0 +1,93 @@
+.landing {
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* CONTAINER UTAMA - DIUBAH MENJADI 100% */
+.landing__container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0 4%; /* Samakan dengan padding header (4%) */
+}
+
+/* ============================
+   1. HERO SECTION (Atas)
+   ============================ */
+.landing__hero {
+  background: #ffffff;
+  padding: 5rem 0 7rem 0;
+  width: 100%;
+}
+
+.landing__hero-content {
+  max-width: 800px; /* Batasi lebar teks saja supaya tidak terlalu panjang ke kanan */
+  text-align: left;
+}
+
+.landing__title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.landing__desc {
+  font-size: 18px;
+  color: #475569;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* ============================
+   2. FEATURES SECTION (Bawah)
+   ============================ */
+.landing__features-wrapper {
+  background: #E8F2FC; /* Latar biru muda target */
+  width: 100%;
+  padding: 5rem 0;
+  border-top: 1px solid #D0E3F5;
+  flex-grow: 1;
+}
+
+.landing__features-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.landing__features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* ============================
+   3. FOOTER
+   ============================ */
+.landing__footer {
+  background: #E8F2FC;
+  text-align: center;
+  padding: 2rem 4%;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ============================
+   4. RESPONSIVE
+   ============================ */
+@media (max-width: 1024px) {
+  .landing__features-grid { grid-template-columns: repeat(2, 1fr); }
+  .landing__title { font-size: 36px; }
+}
+
+@media (max-width: 600px) {
+  .landing__features-grid { grid-template-columns: 1fr; }
+}

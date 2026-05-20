@@ -1,0 +1,64 @@
+/* ── Card Components ── */
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-gray-200);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  animation: slideInUp 0.4s ease backwards;
+}
+.stat-card:nth-child(1) { animation-delay: 0ms; }
+.stat-card:nth-child(2) { animation-delay: 80ms; }
+.stat-card:nth-child(3) { animation-delay: 160ms; }
+.stat-card:nth-child(4) { animation-delay: 240ms; }
+.stat-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+.stat-card__icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 64px; height: 64px; border-radius: var(--radius-sm); flex-shrink: 0;
+}
+.stat-card--blue .stat-card__icon { background: var(--color-sky-blue-lighter); color: var(--color-sky-blue); }
+.stat-card--orange .stat-card__icon { background: var(--color-referee-orange-lighter); color: var(--color-referee-orange); }
+.stat-card--green .stat-card__icon { background: var(--color-success-light); color: var(--color-success); }
+.stat-card--purple .stat-card__icon { background: #EDE9FE; color: #7C3AED; }
+
+.stat-card__content { display: flex; flex-direction: column; gap: var(--space-2); }
+.stat-card__label { font-size: 11px; color: var(--color-gray-500); text-transform: uppercase; font-weight: var(--font-weight-semibold); letter-spacing: 0.5px; line-height: 1; }
+.stat-card__value { font-size: var(--font-size-4xl); font-weight: var(--font-weight-bold); color: var(--color-gray-900); line-height: 1; }
+
+/* Feature Card */
+.feature-card {
+  padding: var(--space-6); background: var(--color-white); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card); transition: all var(--transition-base); text-align: center;
+}
+.feature-card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-4px); }
+.feature-card__icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 56px; height: 56px; margin: 0 auto var(--space-4);
+  background: var(--color-sky-blue-lighter); color: var(--color-sky-blue); border-radius: var(--radius-lg);
+}
+.feature-card__title { font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); margin-bottom: var(--space-2); }
+.feature-card__desc { font-size: var(--font-size-xs); color: var(--color-gray-500); line-height: var(--line-height-relaxed); margin-bottom: 0; }
+
+/* Match Card */
+.match-card {
+  background: var(--color-white); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-gray-200);
+  overflow: hidden; transition: all var(--transition-base); animation: slideInUp 0.4s ease backwards;
+}
+.match-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.match-card__header { display: flex; justify-content: space-between; align-items: center; padding: var(--space-4) var(--space-5); }
+.match-card__title { font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); text-transform: uppercase; }
+.match-card__meta { display: flex; flex-direction: column; gap: var(--space-2); padding: 0 var(--space-5) var(--space-4); font-size: var(--font-size-xs); color: var(--color-gray-500); }
+.match-card__teams { padding: 0 var(--space-5) var(--space-4); display: flex; flex-direction: column; gap: var(--space-2); }
+.match-card__team { display: flex; flex-direction: column; background: var(--color-gray-50); padding: var(--space-3); border-radius: var(--radius-sm); border: 1px solid var(--color-gray-100); }
+.match-card__team strong { font-size: var(--font-size-sm); color: var(--color-gray-900); margin-bottom: 2px; }
+.match-card__club { font-size: 10px; color: var(--color-gray-400); }
+.match-card__vs { font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold); color: var(--color-gray-400); text-align: center; }
+.match-card__actions { display: flex; gap: var(--space-2); padding: 0 var(--space-5) var(--space-4); }
+
+@keyframes slideInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }

@@ -1,0 +1,37 @@
+.scoreboard {
+  background: var(--sb-primary, #001F3F); color: var(--color-white); border-radius: var(--radius-lg);
+  overflow: hidden; font-family: var(--font-family);
+}
+.scoreboard--preview { font-size: 14px; }
+
+.scoreboard__header {
+  background: var(--sb-secondary, #4A90E2); padding: var(--space-4) var(--space-6);
+  text-align: center;
+}
+.scoreboard__header-content {
+  display: flex; align-items: center; justify-content: center; gap: var(--space-4);
+}
+.scoreboard__logo { width: 40px; height: 40px; object-fit: contain; border-radius: var(--radius-sm); }
+.scoreboard__title { font-size: 1.3em; font-weight: var(--font-weight-bold); }
+.scoreboard__subtitle { font-size: 0.9em; opacity: 0.9; margin-bottom: 0; }
+.scoreboard__venue { font-size: 0.75em; opacity: 0.8; margin-top: var(--space-1); margin-bottom: 0; }
+
+.scoreboard__body {
+  display: flex; align-items: center; justify-content: center;
+  gap: var(--space-8); padding: var(--space-8) var(--space-6);
+}
+.scoreboard__player {
+  flex: 1; text-align: center; display: flex; flex-direction: column; align-items: center;
+}
+.scoreboard__player-label { font-size: 0.7em; opacity: 0.6; text-transform: uppercase; letter-spacing: 1px; }
+.scoreboard__player-name { font-size: 1.1em; font-weight: var(--font-weight-bold); margin: var(--space-1) 0; }
+.scoreboard__player-club { font-size: 0.7em; opacity: 0.6; }
+.scoreboard__score {
+  font-size: 3.5em; font-weight: var(--font-weight-bold); line-height: 1;
+  margin-top: var(--space-2);
+}
+.scoreboard__vs {
+  font-size: 1.2em; font-weight: var(--font-weight-bold); opacity: 0.5; flex-shrink: 0;
+}
+
+.scoreboard--preview .scoreboard__score { font-size: 2.5em; }

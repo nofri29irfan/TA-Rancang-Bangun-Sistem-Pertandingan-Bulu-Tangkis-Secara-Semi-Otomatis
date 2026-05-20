@@ -1,0 +1,124 @@
+/* =========================================================
+   ORGANIZER PAGES SHARED STYLES (MASTER GABUNGAN)
+   ========================================================= */
+
+/* ── 1. GLOBAL WRAPPER ── */
+.org-page {
+  animation: fadeIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+/* ── 2. SHARED SECTION & HEADER ── */
+.org-page__section {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 32px;
+  margin-bottom: 24px;
+  border: 1px solid #f1f5f9;
+  overflow: hidden;
+}
+
+.org-page__header-box { margin-bottom: 24px; }
+.org-page__section-title { font-size: 20px; font-weight: 700; color: #1e293b; margin: 0; }
+.org-page__section-subtitle { font-size: 14px; color: #64748b; margin-top: 4px; }
+
+.section-header { padding: 20px 24px; border-bottom: 1px solid #f1f5f9; }
+.section-header h3 { font-size: 18px; font-weight: 700; color: #1e293b; margin: 0; }
+.section-body { padding: 12px 24px 24px; }
+
+/* ── 3. INFO BOX ── */
+.org-page__info-box {
+  display: flex; align-items: flex-start; gap: 16px; padding: 20px;
+  background: #f0f7ff; color: #0369a1; border-radius: 12px; margin-bottom: 32px;
+  border: 1px solid #e0f2fe;
+}
+.info-title { font-weight: 700; font-size: 14px; display: block; margin-bottom: 4px; }
+.info-desc { font-size: 13px; margin: 0; line-height: 1.5; color: #0c4a6e; }
+
+/* ── 4. SHARED FORMS & FILTERS (DIKEMBALIKAN AGAR HALAMAN LAIN TIDAK RUSAK) ── */
+.org-page__form { display: flex; flex-direction: column; gap: 16px; width: 100%; }
+.org-page__form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.org-page__form-row--3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+
+.org-page__form-actions { display: flex; gap: 12px; margin-top: 24px; padding-top: 24px; border-top: 1px solid #f1f5f9; }
+
+.org-page__filters { display: flex; gap: 16px; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap; }
+.org-page__color-group { display: flex; flex-direction: column; gap: 8px; }
+.org-page__color-label { font-size: 14px; font-weight: 600; color: #334155; }
+.org-page__color-input { width: 60px; height: 36px; border: 1.5px solid #cbd5e1; border-radius: 8px; cursor: pointer; padding: 2px; }
+
+.org-page__preview { margin-top: 24px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 2px solid #f1f5f9; }
+
+/* ── 5. DASHBOARD STATS (4 KOLOM SEJAJAR) ── */
+.org-page__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+.stat-card__icon-box { width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.stat-card__icon-box.blue { background: #e0f2fe; color: #0ea5e9; }
+.stat-card__icon-box.green { background: #dcfce7; color: #22c55e; }
+.stat-card__icon-box.orange { background: #ffedd5; color: #f97316; }
+.stat-card__icon-box.purple { background: #f3e8ff; color: #a855f7; }
+
+.stat-card__info { display: flex; flex-direction: column; }
+.stat-card__label { font-size: 10px; font-weight: 700; color: #94a3b8; margin-bottom: 2px; text-transform: uppercase; }
+.stat-card__value { font-size: 24px; font-weight: 800; color: #1e293b; line-height: 1; }
+
+/* ── 6. INPUT MATCH PAGE (TOGGLE & PREVIEW) ── */
+.org-page__toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.type-btn {
+  background: #ffffff; border: 2px solid #f1f5f9; border-radius: 12px; padding: 20px;
+  display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; transition: 0.2s; position: relative;
+}
+.type-btn--active { border-color: #3b82f6; background: #f0f7ff; color: #3b82f6; }
+.type-btn--active-singles { border-color: #94a3b8; background: #f8fafc; color: #64748b; }
+
+.match-preview {
+  background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 12px;
+  padding: 20px; margin: 24px 0; text-align: center;
+}
+.preview-grid { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 10px; }
+.preview-team { font-weight: 700; color: #334155; font-size: 15px; }
+.preview-vs { background: #334155; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; }
+
+.coming-soon-card {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 60px 40px; background: #f8fafc; border: 2px dashed #e2e8f0; border-radius: 24px;
+}
+
+/* ── 7. FORM BUTTONS (INPUT MATCH) ── */
+.form-footer { display: flex; gap: 12px; padding-top: 20px; border-top: 1px solid #f1f5f9; margin-top: 20px; }
+.btn-main { height: 44px; padding: 0 20px; border-radius: 8px; font-weight: 700; display: flex; align-items: center; gap: 8px; cursor: pointer; border: none; transition: 0.2s; }
+.btn-main--primary { background: #3b82f6; color: white; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2); }
+.btn-main--secondary { background: #f1f5f9; color: #64748b; border: 1px solid #e2e8f0; }
+.doubles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+/* ── 8. ANIMATIONS & RESPONSIVE ── */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 1024px) {
+  .org-page__stats { grid-template-columns: repeat(2, 1fr); }
+  .org-page__form-row, .org-page__form-row--3 { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .org-page__stats { grid-template-columns: 1fr; }
+  .doubles-grid { grid-template-columns: 1fr; }
+  .org-page__form-row, .org-page__form-row--3 { grid-template-columns: 1fr; }
+}

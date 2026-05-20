@@ -1,0 +1,120 @@
+/* ============================================
+   Design System - CSS Custom Properties
+   Based on UI Style Guide
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ── Primary Colors ── */
+  --color-deep-blue: #001F3F;
+  --color-sky-blue: #4A90E2;
+  --color-sky-blue-light: #6BA5E7;
+  --color-sky-blue-lighter: #E8F0FE;
+  --color-sky-blue-bg: #F0F6FF;
+  --color-white: #FFFFFF;
+
+  /* ── Secondary Colors ── */
+  --color-referee-orange: #FF8C00;
+  --color-referee-orange-light: #FFA333;
+  --color-referee-orange-lighter: #FFF3E0;
+  --color-referee-orange-bg: #FFF8F0;
+
+  /* ── Semantic Colors ── */
+  --color-success: #28A745;
+  --color-success-light: #D4EDDA;
+  --color-danger: #DC3545;
+  --color-danger-light: #F8D7DA;
+  --color-warning: #FFC107;
+  --color-warning-light: #FFF3CD;
+  --color-info: #17A2B8;
+  --color-info-light: #D1ECF1;
+
+  /* ── Neutral Colors ── */
+  --color-gray-900: #1A1A2E;
+  --color-gray-800: #2D2D44;
+  --color-gray-700: #374151;
+  --color-gray-600: #4B5563;
+  --color-gray-500: #6B7280;
+  --color-gray-400: #9CA3AF;
+  --color-gray-300: #D1D5DB;
+  --color-gray-200: #E5E7EB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-50: #F9FAFB;
+
+  /* ── Live Scoring Dark Theme ── */
+  --color-dark-bg: #0F0F23;
+  --color-dark-surface: #1A1A3E;
+  --color-dark-card: #2A2A5A;
+  --color-dark-border: #3A3A6A;
+
+  /* ── Typography ── */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-size-4xl: 36px;
+  --font-size-5xl: 48px;
+  --font-size-score: 72px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* ── Spacing ── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* ── Border Radius ── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 2px 8px rgba(0, 31, 63, 0.08);
+  --shadow-card-hover: 0 4px 16px rgba(0, 31, 63, 0.12);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+
+  /* ── Layout ── */
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 64px;
+  --header-height: 64px;
+  --max-content-width: 1200px;
+
+  /* ── Z-index ── */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal-backdrop: 300;
+  --z-modal: 400;
+  --z-tooltip: 500;
+}

@@ -1,0 +1,199 @@
+/* ── Button Component ── */
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Sizes */
+.btn--sm {
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-xs);
+  border-radius: var(--radius-sm);
+}
+
+.btn--md {
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--font-size-sm);
+}
+
+.btn--lg {
+  padding: var(--space-3) var(--space-8);
+  font-size: var(--font-size-base);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* ── Variants ── */
+
+/* Primary (Blue) */
+.btn--primary {
+  background: var(--color-sky-blue);
+  color: var(--color-white);
+  border-color: var(--color-sky-blue);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background: var(--color-sky-blue-light);
+  border-color: var(--color-sky-blue-light);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Secondary (Outlined) */
+.btn--secondary {
+  background: transparent;
+  color: var(--color-sky-blue);
+  border-color: var(--color-sky-blue);
+}
+
+.btn--secondary:hover:not(:disabled) {
+  background: var(--color-sky-blue);
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+/* Export (Green/Success) */
+.btn--export {
+  background: var(--color-referee-orange);
+  color: var(--color-white);
+  border-color: var(--color-referee-orange);
+}
+
+.btn--export:hover:not(:disabled) {
+  background: var(--color-referee-orange-light);
+  border-color: var(--color-referee-orange-light);
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Danger */
+.btn--danger {
+  background: var(--color-danger);
+  color: var(--color-white);
+  border-color: var(--color-danger);
+}
+
+.btn--danger:hover:not(:disabled) {
+  background: #c82333;
+  border-color: #c82333;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Success */
+.btn--success {
+  background: var(--color-success);
+  color: var(--color-white);
+  border-color: var(--color-success);
+}
+
+.btn--success:hover:not(:disabled) {
+  background: #218838;
+  border-color: #218838;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Ghost */
+.btn--ghost {
+  background: transparent;
+  color: var(--color-gray-600);
+  border-color: var(--color-gray-300);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background: var(--color-gray-100);
+  color: var(--color-gray-700);
+  border-color: var(--color-gray-400);
+}
+
+/* Orange (for umpire) */
+.btn--orange {
+  background: var(--color-referee-orange);
+  color: var(--color-white);
+  border-color: var(--color-referee-orange);
+}
+
+.btn--orange:hover:not(:disabled) {
+  background: var(--color-referee-orange-light);
+  border-color: var(--color-referee-orange-light);
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+/* ── States ── */
+.btn--disabled,
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn--loading {
+  pointer-events: none;
+}
+
+/* ── Spinner ── */
+.btn__spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Ripple ── */
+.btn__ripple {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  animation: ripple 0.5s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.btn__icon {
+  flex-shrink: 0;
+}
+
+.btn__label {
+  position: relative;
+  z-index: 1;
+}
